@@ -22,8 +22,7 @@ function App() {
   const films = data?.results.map((f) => <li key={f.episode_id}>{f.title}</li>);
 
   if (error) return <p>Error!</p>;
-
-  return <div>{!loading ? films : <p>Loading...</p>}</div>;
+  return !loading ? films : <p>Loading...</p>;
 }
 
 export default App;
